@@ -4,7 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="icon" href="img/favicon.png">
-		<title>Макетная мастерская</title>
+		<title>WooComerce_v.1</title>
+
+		<?php wp_head(); ?>
+
 	</head>
 	<body class="body">
 		<!-- Кнопка вызова меню -->
@@ -977,14 +980,6 @@
 			<!-- /.overlay-message -->
 													 <!-- Подключение стилей и скриптов -->
 									<!-- Слайдер -->
-			<link rel="stylesheet" href="slick/slick.css">
-			<link rel="stylesheet" href="slick/slick-theme.css">
-			<!-- Анимация -->
-			<link href="css/animate.css" rel="stylesheet">
-			<!-- Bootstrap core CSS -->
-			<link href="css/bootstrap-grid.min.css" rel="stylesheet">
-			<!-- Custom styles for this template -->
-			<link href="css/style.css" rel="stylesheet">
 			<!-- Google Analytics -->
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-84746048-3"></script>
 			<script>
@@ -995,191 +990,9 @@
 			  gtag('config', 'UA-84746048-3');
 			</script>
 			<!-- Яндекс метрика -->
-			<script> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48955211 = new Ya.Metrika({ id:48955211, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48955211" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
-				<!-- Скрипты -->
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-			<script src="slick/slick.min.js"></script>
-<!-- 			<script>
-				$(document).ready(function(){
-					$('.show-order').on("click", function(){
-						$('.overlay').show()
-					});
-					$('.popup_close').on("click", function(){
-						$('.overlay').hide()
-					});
-				});
-			</script> -->
-			<script>
-				$(document).ready(function(){
-					if($(window).width() < 992){
-					        $('.show-order').on("click", function(){
-					        						$("body").toggleClass("lock");
-					        						$('.overlay').show();
-					        						$(".overlay").css("overflow","scroll");
-					        					});
-					        $('.popup_close').on("click", function(){
-					        	$("body").removeClass("lock");
-					        	$('.overlay').hide();
-					        });
-					    }
-					    else {
-					    	$('.show-order').on("click", function(){
-					    							$('.overlay').show();
-					    						});
-					    	$('.popup_close').on("click", function(){
-					    		$('.overlay').hide();
-					    	});
-					    };
-					    });
-				</script>
-			<script>
-				$(document).ready(function(){
-					if($(window).width() < 992){
-        $('.show-politic').on("click", function(){
-        						$("body").toggleClass("lock");
-        						$('.overlay-politic').show();
-        						$(".overlay-politic").css("overflow","scroll");
-        					});
-        $('.popup_close-politic').on("click", function(){
-        	$("body").removeClass("lock");
-        	$('.overlay-politic').hide();
-        });
-    }
-    else {
-    	$('.show-politic').on("click", function(){
-    							$('.overlay-politic').show();
-    						});
-    	$('.popup_close-politic').on("click", function(){
-    		$('.overlay-politic').hide();
-    	});
-    };
-    });
-				</script>
-				<script>
-					$(document).ready(function(){
-						var link = $('.menu-link');
-						var link_active = $('.menu-link_active');
-						var nav_link = $('.menu a');
-						var menu = $('.nav-menu');
-						link.click(function(){
-							link.toggleClass('menu-link_active');
-							menu.toggleClass('nav-menu_active');
-							$("body").toggleClass("lock");
-							$(".nav-menu_active").css("overflow-y","auto");
-						});
-						link_active.click(function(){
-							link.removeClass('menu-link_active');
-							menu.removeClass('nav-menu_active');
-							$(".nav-menu_active").css("overflow-y","hidden");
-							$("body").removeClass("lock");
-						});
-						nav_link.click(function(){
-							link.removeClass('menu-link_active');
-							menu.removeClass('nav-menu_active');
-							$("body").removeClass("lock");
-
-						});
-					});
-				</script>
-			<script>
-				$('.slider').slick({
-					arrows: true,
-					slidesToShow: 4,
-					slidesToScroll: 1,
-					draggable: false,
-					swipe: false,
-					prevArrow: '<div class="slider-left"></div>',
-					nextArrow: '<div class="slider-right"></div>',
-					responsive: [
-						{
-			    breakpoint: 1200,
-		     settings: {
-		   		slidesToShow: 3,
-		     arrows: true,
-						}},
-						{
-			    breakpoint: 992,
-					  settings: {
-		   		slidesToShow: 2,
-		   		swipe: true,
-		   		arrows: true,
-		     autoplay: false,
-		     infinite: true,
-						}},
-						{
-			    breakpoint: 768,
-		  		 settings: {
-		   		slidesToShow: 1,
-		   		swipe: true,
-		   		arrows: true,
-		     autoplay: false,
-		     infinite: true,
-						}}
-					]
-					});
-						$('.slider-block__img').slick({
-							dots: true,
-							arrows: false,
-							swipe: true,
-							infinite: true,
-							slidesToShow: 1,
-							slidesToScroll: 1,
-							responsive: [
-							{
-				    breakpoint: 992,
-	       settings: {
-	      	swipe: false,
-	      	autoplay: false,
-	       arrows: false,
-	       dots: false,
-	       infinite: true,
-							}}]
-						});
+			<!-- <script> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48955211 = new Ya.Metrika({ id:48955211, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48955211" style="position:absolute; left:-9999px;" alt="" /></div></noscript>  -->
+			<!-- /Yandex.Metrika counter -->
 			</script>
-			<script>
-				$(document).ready(function(){
-					var arrow_1 = $('.manual-arrow_1');
-					var arrow_2 = $('.manual-arrow_2');
-					var arrow_3 = $('.manual-arrow_3');
-					var manual_img = $('.manual-block__img');
-					manual_img.hover(function(){
-						arrow_1.toggleClass('manual-arrow_1-active');
-						arrow_2.toggleClass('manual-arrow_2-active');
-						arrow_3.toggleClass('manual-arrow_3-active');
-					});
-				});
-			</script>
-			<script src="js/jquery.maskedinput.min.js"></script>
-			<script>
-				$(document).ready(function() {
-					$(".input-phone").mask("+7 (999) 999-9999", {autoclear: false});
-				});
-			</script>
-			<script>
-				$('form').submit(function(event) {
-					event.preventDefault();
-					$.ajax({
-						type: "POST",
-						url: "mailer/smart.php",
-						data: $(this).serialize()
-					}).done(function() {
-						$(this).find("input").val("");
-						$('.overlay').hide()
-						$('.overlay-message').show()
-						setTimeout(function(){ 
-							$(".overlay-message").hide();
-						},3000);
-						$("form").trigger("reset");
-					});
-					return false;
-				});
-				$(document).ready(function(){
-
-				});
-			</script>
-			<script src="js/wow.min.js"></script>
-			<script>
-				new WOW().init();
-			</script>
+			<?php wp_footer(); ?>
 	</body>
 </html>
