@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="icon" href="img/favicon.png">
+		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png">
 		<title>WooComerce_v.1</title>
 
 		<?php wp_head(); ?>
@@ -22,7 +22,7 @@
 						<div class="col-5 col-sm-3 col-lg-3">
 							<a href="#" class="header-logo">
 								<!-- <div class="header-logo__img"></div> -->
-								<img src="img/header-footer/header-logo.png" class="header-logo__img" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/img/header-footer/header-logo.png" class="header-logo__img" alt="">
 							</a>
 						</div>
 						<!-- /.col-3 -->
@@ -30,11 +30,11 @@
 							<div class="row">
 								<div class="col-12 col-lg-7">
 									<div class="header-adress justify-content-center">
-											<img src="img/header-footer/header-label.png" class="header-adress__icon" alt="">
+											<img src="<?php echo get_template_directory_uri(); ?>/img/header-footer/header-label.png" class="header-adress__icon" alt="">
 										<!-- /.adress-icon -->
 										<div class="header-adress__text">
-											г. Москва,<br>
-											Авиамоторная улица, 4А
+											г. Город,<br>
+											Уличная улица, 44
 										</div>
 										<!-- /.adress-text -->
 									</div>
@@ -43,10 +43,10 @@
 								<!-- /.col-4 -->
 								<div class="col-12 col-lg-5">
 									<div class="header-adress header-adress_email justify-content-center">
-											<img src="img/header-footer/header-mail.png" class="header-adress__icon header-mail__icon" alt="">
+											<img src="<?php echo get_template_directory_uri(); ?>/img/header-footer/header-mail.png" class="header-adress__icon header-mail__icon" alt="">
 										<!-- /.adress-icon -->
 										<div class="header-adress__text header-mail__text">
-											<a href="mailto:info@maketstorent.ru">info@maketstorent.ru</a>
+											<a href="mailto:<?php the_field('email', 2);?>"><?php the_field('email', 2);?></a>
 										</div>
 										<!-- /.adress-text -->
 								</div>
@@ -59,7 +59,7 @@
 						<div class="col-7 col-sm-4 col-lg-3">
 							<div class="header-contacts">
 								<div class="header-contacts__phone">
-									<a href="tel:+7(495)008-55-77">+7 (495) 008-55-77</a>
+									<a href="tel:<?php the_field('phone', 2);?>"><?php the_field('phone', 2);?></a>
 								</div>
 								<!-- /.header-contacts__phone -->
 								<div class="header-contacts__order  show-order">
@@ -106,8 +106,7 @@
 						<div class="col-12 col-lg-7 col-xl-7">
 							<div class="advantages">
 								<div class="advantages-title">
-									<h1>Все материалы для макетирования
-									по низкой цене и в наличии в Москве</h1>
+									<h1><?php the_title(); ?></h1>
 								</div>
 								<!-- /.advantages-title -->
 								<div class="advantages-subtitle">
@@ -120,36 +119,33 @@
 									<div class="col-12 col-md-6">
 										<div class="advantages-block">
 											<div class="advantages-block__img">
-												<img src="img/main/img-1.png" alt="">
+												<img src="<?php the_field('on_the_market_image', 2);?>" alt="icon">
 											</div>
 											<!-- /.advantages-block__img -->
 											<div class="advantages-block__text">
-												На рынке макетирования
-												более 5 лет!
+												<?php the_field('on_the_market', 2);?>
 											</div>
 											<!-- /.advantages-block__text -->
 										</div>
 										<!-- /.advantages-block -->
 										<div class="advantages-block">
 											<div class="advantages-block__img">
-												<img src="img/main/img-2.png" alt="">
+												<img src="<?php the_field('professional_selection_image', 2);?>" alt="icon">
 											</div>
 											<!-- /.advantages-block__img -->
 											<div class="advantages-block__text">
-												Профессиональный подбор
-												необходимого материала
+												<?php the_field('professional_selection', 2);?>
 											</div>
 											<!-- /.advantages-block__text -->
 										</div>
 										<!-- /.advantages-block -->
 										<div class="advantages-block">
 											<div class="advantages-block__img">
-												<img src="img/main/img-3.png" alt="">
+												<img src="<?php the_field('discounts_image', 2);?>" alt="icon">
 											</div>
 											<!-- /.advantages-block__img -->
 											<div class="advantages-block__text">
-												Дополнительные скидки
-												студентам
+												<?php the_field('discounts_text', 2);?>
 											</div>
 											<!-- /.advantages-block__text -->
 										</div>
@@ -159,36 +155,33 @@
 									<div class="col-12 col-md-6">
 										<div class="advantages-block">
 											<div class="advantages-block__img">
-												<img src="img/main/img-4.png" alt="">
+												<img src="<?php the_field('certificate_image', 2);?>" alt="icon">
 											</div>
 											<!-- /.advantages-block__img -->
 											<div class="advantages-block__text">
-												Каждый материал имеет
-												сертификат качества
+												<?php the_field('certificate_text', 2);?>
 											</div>
 											<!-- /.advantages-block__text -->
 										</div>
 										<!-- /.advantages-block -->
 										<div class="advantages-block">
 											<div class="advantages-block__img">
-												<img src="img/main/img-5.png" alt="">
+												<img src="<?php the_field('delivery_in_the_city_image', 2);?>" alt="icon">
 											</div>
 											<!-- /.advantages-block__img -->
 											<div class="advantages-block__text">
-												Доставка по Москве
-												в день обращения
+												<?php the_field('delivery_in_the_city', 2);?>
 											</div>
 											<!-- /.advantages-block__text -->
 										</div>
 										<!-- /.advantages-block -->
 										<div class="advantages-block advantages-block_last">
 											<div class="advantages-block__img">
-												<img src="img/main/img-6.png" alt="">
+												<img src="<?php the_field('delivery_to_regions_image', 2);?>" alt="icon">
 											</div>
 											<!-- /.advantages-block__img -->
 											<div class="advantages-block__text">
-												Быстрая доставка
-												в регионы
+												<?php the_field('delivery_to_regions', 2);?>
 											</div>
 											<!-- /.advantages-block__text -->
 										</div>
@@ -243,103 +236,47 @@
 			</div>
 			<!-- /.section-title -->
 			<div class="container">
-				<img src="img/materials/materials-img.png" class="materials-img lego-img" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/materials/materials-img.png" class="materials-img lego-img" alt="">
 			<!-- Слайдер в секции -->
 				<div class="slider">
-					<div class="slider-block">
-						<div class="slider-block__img">
-							<img src="img/materials/materials-slide-1/slide-1-1img.png" alt="">
-						</div>
-						<!-- /.slider-slider__img -->
-						<div class="slider-block__name">
-							Пенопласт
-						</div>
-						<!-- /.slider-name -->
-						<div class="slider-block__price">
-							от 500 руб.
-						</div>
-						<!-- /.slider-price -->
-						<a class="slider-block__button">
-							<div class="slider-block__button_img"></div>
-							<div class="slider-block__button_text">Купить</div>
-						</a>
-					</div>
-					<!-- /.slider-block -->
-					<div class="slider-block">
-						<div class="slider-block__img">
-							<img src="img/materials/materials-slide-2/slide-2-1img.png" alt="">
-						</div>
-						<!-- /.slider-slider__img -->
-						<div class="slider-block__name">
-							Пенокартон
-						</div>
-						<!-- /.slider-name -->
-						<div class="slider-block__price">
-							от 100 руб.
-						</div>
-						<!-- /.slider-price -->
-						<a class="slider-block__button">
-							<div class="slider-block__button_img"></div>
-							<div class="slider-block__button_text">Купить</div>
-						</a>
-					</div>
-					<!-- /.slider-block -->
-					<div class="slider-block">
-						<div class="slider-block__img">
-							<img src="img/materials/materials-slide-3/slide-3-1img.png" alt="">
-						</div>
-						<!-- /.slider-slider__img -->
-						<div class="slider-block__name">
-							ПВХ
-						</div>
-						<!-- /.slider-name -->
-						<div class="slider-block__price">
-							от 350 руб.
-						</div>
-						<!-- /.slider-price -->
-						<a class="slider-block__button">
-							<div class="slider-block__button_img"></div>
-							<div class="slider-block__button_text">Купить</div>
-						</a>
-					</div>
-					<!-- /.slider-block -->
-					<div class="slider-block">
-						<div class="slider-block__img">
-							<img src="img/materials/materials-slide-4/slide-4-1img.png" alt="">
-						</div>
-						<!-- /.slider-slider__img -->
-						<div class="slider-block__name">
-							Полистирол
-						</div>
-						<!-- /.slider-name -->
-						<div class="slider-block__price">
-							от 400 руб.
-						</div>
-						<!-- /.slider-price -->
-						<a class="slider-block__button">
-								<div class="slider-block__button_img"></div>
-								<div class="slider-block__button_text">Купить</div>
-						</a>
-					</div>
-					<!-- /.slider-block -->
-					<div class="slider-block">
-						<div class="slider-block__img">
-							<img src="img/materials/materials-slide-3/slide-3-1img.png" alt="">
-						</div>
-						<!-- /.slider-slider__img -->
-						<div class="slider-block__name">
-							ПВХ
-						</div>
-						<!-- /.slider-name -->
-						<div class="slider-block__price">
-							от 350 руб.
-						</div>
-						<!-- /.slider-price -->
-						<a class="slider-block__button">
-							<div class="slider-block__button_img"></div>
-							<div class="slider-block__button_text">Купить</div>
-						</a>
-					</div>
+					<?php
+						global $post;
+
+						$myposts = get_posts([ 
+							'numberposts' => 10,
+							'category_name'    => 'materials'
+						]);
+
+						if( $myposts ){
+							foreach( $myposts as $post ){
+								setup_postdata( $post );
+								?>
+								<div class="slider-block">
+									<div class="slider-block__img">
+										<img src="<?php the_field('material_image'); ?>" alt="material image">
+									</div>
+									<!-- /.slider-slider__img -->
+									<div class="slider-block__name">
+										<?php the_title();?>
+									</div>
+									<!-- /.slider-name -->
+									<div class="slider-block__price">
+										<?php the_field('material_price'); ?>
+									</div>
+									<!-- /.slider-price -->
+									<a class="slider-block__button">
+										<div class="slider-block__button_img"></div>
+										<div class="slider-block__button_text">Купить</div>
+									</a>
+								</div>
+								<?php 
+							}
+						} else {
+							// Постов не найдено
+						}
+
+						wp_reset_postdata(); // Сбрасываем $post
+					?>
 					<!-- /.slider-block -->
 				</div>
 				<!-- /.slider -->
@@ -356,12 +293,12 @@
 			</div>
 			<!-- /.section-title -->
 			<div class="container">
-				<img src="img/tools/tools-img.png" class="tools-img lego-img" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/tools/tools-img.png" class="tools-img lego-img" alt="">
 			<!-- Слайдер в секции -->
 				<div class="slider">
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/tools/tools-slide-1/slide-1-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/tools/tools-slide-1/slide-1-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -382,7 +319,7 @@
 
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/tools/tools-slide-2/slide-2-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/tools/tools-slide-2/slide-2-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -401,7 +338,7 @@
 					<!-- /.slider-block -->
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/tools/tools-slide-3/slide-3-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/tools/tools-slide-3/slide-3-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -420,7 +357,7 @@
 					<!-- /.slider-block -->
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/tools/tools-slide-4/slide-4-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/tools/tools-slide-4/slide-4-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -439,7 +376,7 @@
 					<!-- /.slider-block -->
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/tools/tools-slide-3/slide-3-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/tools/tools-slide-3/slide-3-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -471,12 +408,12 @@
 			</div>
 			<!-- /.section-title -->
 			<div class="container">
-				<img src="img/prototyping/prototyping-img.png" class="prototyping-img lego-img" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/prototyping/prototyping-img.png" class="prototyping-img lego-img" alt="">
 			<!-- Слайдер в секции -->
 				<div class="slider">
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/prototyping/prototyping-slide-1/slide-1-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/prototyping/prototyping-slide-1/slide-1-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -496,7 +433,7 @@
 					<!-- /.slider-block -->
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/prototyping/prototyping-slide-2/slide-2-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/prototyping/prototyping-slide-2/slide-2-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -516,7 +453,7 @@
 					<!-- /.slider-block -->
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/prototyping/prototyping-slide-3/slide-3-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/prototyping/prototyping-slide-3/slide-3-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -536,7 +473,7 @@
 					<!-- /.slider-block -->
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/prototyping/prototyping-slide-4/slide-4-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/prototyping/prototyping-slide-4/slide-4-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -556,7 +493,7 @@
 					<!-- /.slider-block -->
 					<div class="slider-block">
 						<div class="slider-block__img">
-							<img src="img/prototyping/prototyping-slide-3/slide-3-1img.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/prototyping/prototyping-slide-3/slide-3-1img.png" alt="">
 						</div>
 						<!-- /.slider-slider__img -->
 						<div class="slider-block__name">
@@ -639,7 +576,7 @@
 						<div class="col-12 col-lg-3">
 							<div class="manual-block">
 								<div class="manual-block__img">
-									<img src="img/manual/manual-img-1.png" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/manual/manual-img-1.png" alt="">
 								</div>
 								<!-- /.manual-img -->
 								<div class="manual-block__text">
@@ -652,13 +589,13 @@
 								<!-- /.manual-text -->
 							</div>
 							<!-- /.manual-block -->
-							<img src="img/manual/manual-arrow.png" alt="" class="manual-arrow manual-arrow_1">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/manual/manual-arrow.png" alt="" class="manual-arrow manual-arrow_1">
 						</div>
 						<!-- /.col-3 -->
 						<div class="col-12 col-lg-3">
 							<div class="manual-block">
 								<div class="manual-block__img">
-									<img src="img/manual/manual-img-2.png" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/manual/manual-img-2.png" alt="">
 								</div>
 								<!-- /.manual-img -->
 								<div class="manual-block__text">
@@ -669,13 +606,13 @@
 								<!-- /.manual-text -->
 							</div>
 							<!-- /.manual-block -->
-							<img src="img/manual/manual-arrow.png" alt="" class="manual-arrow manual-arrow_2">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/manual/manual-arrow.png" alt="" class="manual-arrow manual-arrow_2">
 						</div>
 						<!-- /.col-3 -->
 						<div class="col-12 col-lg-3">
 							<div class="manual-block">
 								<div class="manual-block__img">
-									<img src="img/manual/manual-img-3.png" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/manual/manual-img-3.png" alt="">
 								</div>
 								<!-- /.manual-img -->
 								<div class="manual-block__text">
@@ -688,13 +625,13 @@
 								<!-- /.manual-text -->
 							</div>
 							<!-- /.manual-block -->
-							<img src="img/manual/manual-arrow.png" alt="" class="manual-arrow manual-arrow_3">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/manual/manual-arrow.png" alt="" class="manual-arrow manual-arrow_3">
 						</div>
 						<!-- /.col-3 -->
 						<div class="col-12 col-lg-3">
 							<div class="manual-block manual-block_last">
 								<div class="manual-block__img">
-									<img src="img/manual/manual-img-4.png" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/manual/manual-img-4.png" alt="">
 								</div>
 								<!-- /.manual-img -->
 								<div class="manual-block__text">
@@ -727,12 +664,11 @@
 					<div class="col-12 col-md-6 col-xl-3">
 						<div class="delivery-block">
 							<div class="delivery-block__img">
-								<img src="img/delivery/delivery-img-1.png" alt="">
+								<img src="<?php the_field('delivery_terms_1_image', 2);?>" alt="icon">
 							</div>
 							<!-- /.delivery-block__img -->
 							<div class="delivery-block__text">
-								Доставка в пределах МКАД
-								от 3000 руб. <span>бесплатно</span>
+								<?php the_field('delivery_terms_1', 2);?>
 							</div>
 							<!-- /.delivery-block__text -->
 						</div>
@@ -742,12 +678,11 @@
 					<div class="col-12 col-md-6 col-xl-3">
 						<div class="delivery-block">
 							<div class="delivery-block__img">
-								<img src="img/delivery/delivery-img-2.png" alt="">
+								<img src="<?php the_field('delivery_terms_2_image', 2);?>" alt="icon">
 							</div>
 							<!-- /.delivery-block__img -->
 							<div class="delivery-block__text">
-								Доставка <span>300 руб.</span> при заказе
-								менее 3000 руб.
+								<?php the_field('delivery_terms_2', 2);?>
 							</div>
 							<!-- /.delivery-block__text -->
 						</div>
@@ -757,12 +692,11 @@
 					<div class="col-12 col-md-6 col-xl-3">
 						<div class="delivery-block delivery-block_last1">
 							<div class="delivery-block__img">
-								<img src="img/delivery/delivery-img-3.png" alt="">
+								<img src="<?php the_field('delivery_terms_3_image', 2);?>" alt="icon">
 							</div>
 							<!-- /.delivery-block__img -->
 							<div class="delivery-block__text">
-								<span>Доставка в регионы</span> любой
-								удобной транспортной компанией
+								<?php the_field('delivery_terms_3', 2);?>
 							</div>
 							<!-- /.delivery-block__text -->
 						</div>
@@ -772,12 +706,11 @@
 					<div class="col-12 col-md-6 col-xl-3">
 						<div class="delivery-block delivery-block_last2">
 							<div class="delivery-block__img">
-								<img src="img/delivery/delivery-img-4.png" alt="">
+								<img src="<?php the_field('delivery_terms_4_image', 2);?>" alt="icon">
 							</div>
 							<!-- /.delivery-block__img -->
 							<div class="delivery-block__text">
-								<span>Самовывоз:</span> <br>
-								Автомоторная 4а стр 21.
+								<?php the_field('delivery_terms_4', 2);?>
 							</div>
 							<!-- /.delivery-block__text -->
 						</div>
@@ -798,11 +731,11 @@
 						<div class="col-12 col-md-3">
 							<div class="contacts-block">
 								<div class="contacts-block__img">
-									<img src="img/contacts/contacts-mail.png" alt="">
+									<img src="<?php the_field('email_image', 2);?>" alt="icon">
 								</div>
 								<!-- /.contacts-block__img -->
 								<div class="contacts-block__text">
-									<a href="mailto:storent@maketstorent.ru">storent@maketstorent.ru</a>
+									<a href="mailto:<?php the_field('email', 2);?>"><?php the_field('email', 2);?></a>
 								</div>
 								<!-- /.contacts-block__text -->
 							</div>
@@ -812,11 +745,11 @@
 						<div class="col-12 col-md-3">
 							<div class="contacts-block">
 								<div class="contacts-block__img">
-									<img src="img/contacts/contacts-phone.png" alt="">
+									<img src="<?php the_field('phone_image', 2);?>" alt="icon">
 								</div>
 								<!-- /.contacts-block__img -->
 								<div class="contacts-block__text">
-									<a href="tel:+7(495)008-55-77">+7 (495) 008-55-77</a>
+									<a href="tel:<?php the_field('phone', 2);?>"><?php the_field('phone', 2);?></a>
 								</div>
 								<!-- /.contacts-block__text -->
 							</div>
@@ -826,11 +759,11 @@
 						<div class="col-12 col-md-3">
 							<div class="contacts-block contacts-block_last">
 								<div class="contacts-block__img">
-									<img src="img/contacts/contacts-clock.png" alt="">
+									<img src="<?php the_field('work_time_image', 2);?>" alt="icon">
 								</div>
 								<!-- /.contacts-block__img -->
 								<div class="contacts-block__text">
-									пн-вс с 10-00 до 22-00
+									<?php the_field('work_time', 2);?>
 								</div>
 								<!-- /.contacts-block__text -->
 							</div>
@@ -862,7 +795,7 @@
 						<div class="col-5 col-sm-3 col-lg-3">
 							<a href="#" class="footer-logo">
 								<!-- <div class="footer-logo__img"></div> -->
-								<img src="img/header-footer/header-logo.png" class="header-logo__img" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/header-footer/header-logo.png" class="header-logo__img" alt="">
 							</a>
 						</div>
 						<!-- /.col-3 -->
@@ -870,7 +803,7 @@
 							<div class="row">
 								<div class="col-12 col-lg-7">
 									<div class="footer-adress">
-											<img src="img/header-footer/header-label.png" class="header-adress__icon" alt="">
+											<img src="<?php echo get_template_directory_uri(); ?>/img/header-footer/header-label.png" class="header-adress__icon" alt="">
 										<!-- /.adress-icon -->
 										<div class="footer-adress__text">
 											г. Москва,<br>
@@ -883,7 +816,7 @@
 								<!-- /.col-4 -->
 								<div class="col-12 col-lg-5">
 									<div class="footer-adress footer-adress_email ">
-											<img src="img/header-footer/header-mail.png" class="footer-adress__icon footer-mail__icon" alt="">
+											<img src="<?php echo get_template_directory_uri(); ?>/img/header-footer/header-mail.png" class="footer-adress__icon footer-mail__icon" alt="">
 										<!-- /.adress-icon -->
 										<div class="footer-adress__text footer-mail__text">
 											<a href="mailto:info@maketstorent.ru">info@maketstorent.ru</a>
