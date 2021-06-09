@@ -22,7 +22,7 @@
 						<div class="col-5 col-sm-3 col-lg-3">
 							<a href="#" class="header-logo">
 								<!-- <div class="header-logo__img"></div> -->
-								<img src="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/img/header-footer/header-logo.png" class="header-logo__img" alt="">
+								<?php the_custom_logo();?>
 							</a>
 						</div>
 						<!-- /.col-3 -->
@@ -205,6 +205,7 @@
 										прямо сейчас
 									</div>
 									<!-- /.form-title -->
+									<!-- <?php do_shortcode( '[contact-form-7 id="151" title="main-form"]' )?> -->
 									<input type="text" name="user_name" class="form-input" placeholder="Ваше имя" required>
 									<input type="tel" name="user_phone" class="form-input input-phone" placeholder="Контактный телефон" required>
 									<textarea name="user_text" class="form-input form-textarea" placeholder="Какие материалы вам требуются?" cols="20" rows="3" required></textarea>
@@ -658,7 +659,7 @@
 			</div>
 			<!-- /.contacts  -->
 			<div class="map">
-				<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abc64111efa18e9cd45b67a4899437e2ea575494fa0d59ee70708c66b4397775f&amp;width=100%25&amp;height=417&amp;lang=ru_RU&amp;scroll=false"></script>
+				<?php the_field('map_google_code'); ?>
 			</div>
 		</div>
 		<!-- /.contacts-bg -->
@@ -676,7 +677,7 @@
 						<div class="col-5 col-sm-3 col-lg-3">
 							<a href="#" class="footer-logo">
 								<!-- <div class="footer-logo__img"></div> -->
-								<img src="<?php echo get_template_directory_uri(); ?>/img/header-footer/header-logo.png" class="header-logo__img" alt="">
+								<?php the_custom_logo();?>
 							</a>
 						</div>
 						<!-- /.col-3 -->
@@ -687,8 +688,8 @@
 											<img src="<?php echo get_template_directory_uri(); ?>/img/header-footer/header-label.png" class="header-adress__icon" alt="">
 										<!-- /.adress-icon -->
 										<div class="footer-adress__text">
-											г. Москва,<br>
-											Авиамоторная улица, 4А
+											г. Город,<br>
+											Уличная улица, 44А
 										</div>
 										<!-- /.adress-text -->
 									</div>
@@ -700,7 +701,7 @@
 											<img src="<?php echo get_template_directory_uri(); ?>/img/header-footer/header-mail.png" class="footer-adress__icon footer-mail__icon" alt="">
 										<!-- /.adress-icon -->
 										<div class="footer-adress__text footer-mail__text">
-											<a href="mailto:info@maketstorent.ru">info@maketstorent.ru</a>
+											<a href="mailto:<?php the_field('email', 2);?>"><?php the_field('email', 2);?></a>
 										</div>
 										<!-- /.adress-text -->
 								</div>
@@ -713,7 +714,7 @@
 						<div class="col-7 col-sm-5 col-lg-3">
 							<div class="footer-contacts">
 								<div class="footer-contacts__phone">
-									<a href="tel:+7(495)008-55-77">+7 (495) 008-55-77</a>
+									<a href="tel:<?php the_field('phone', 2);?>"><?php the_field('phone', 2);?></a>
 								</div>
 								<!-- /.footer-contacts__phone -->
 								<div class="footer-contacts__order show-order">
@@ -741,6 +742,7 @@
 								прямо сейчас
 							</div>
 							<!-- /.form-title -->
+							<!-- <?php do_shortcode( '[contact-form-7 id="151" title="main-form"]' )?> -->
 							<input type="text" name="user_name" class="form-input" placeholder="Ваше имя" required>
 							<input type="tel" name="user_phone" id="phone1" class="form-input input-phone" placeholder="Контактный телефон" required>
 							<textarea name="user_text" class="form-input form-textarea" placeholder="Какие материалы вам требуются?" cols="20" rows="3" required></textarea>
