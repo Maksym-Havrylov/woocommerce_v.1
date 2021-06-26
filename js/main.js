@@ -125,7 +125,7 @@ $(document).ready(function () {
     arrow_3.toggleClass('manual-arrow_3-active');
   });
 
-  $(".input-phone").mask("+7 (999) 999-9999", {
+  $(".input-phone").mask("+9 (999) 999-9999", {
     autoclear: false
   });
 

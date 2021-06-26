@@ -205,7 +205,7 @@
 										прямо сейчас
 									</div>
 									<!-- /.form-title -->
-									<!-- <?php do_shortcode( '[contact-form-7 id="151" title="main-form"]' )?> -->
+									<!-- <?php do_shortcode( '[contact-form-7 id="165" title="main-form"]' )?> -->
 									<input type="text" name="user_name" class="form-input" placeholder="Ваше имя" required>
 									<input type="tel" name="user_phone" class="form-input input-phone" placeholder="Контактный телефон" required>
 									<textarea name="user_text" class="form-input form-textarea" placeholder="Какие материалы вам требуются?" cols="20" rows="3" required></textarea>
@@ -769,16 +769,17 @@
 							Политика в отношении персональных данных определяет основные принципы и правила по обработке персональных данных, которыми мы руководствуемся в нашей работе, также в общении с клиентами, поставщиками и сотрудниками. Политика в отношении обработки персональных данных распространяется на всех наших сотрудников.
 						</p>
 						<p>
-							При обработке персональных данных мы стремимся соблюдать требования законодательства Российской Федерации, в частности Федеральный зкаон № 152-ФЗ "О персональных данных, а также нормы и правила, установленные в нашей компании".
+							При обработке персональных данных мы стремимся соблюдать требования законодательства какой-то сраны, в частности зкаон № 000-ФУ "О персональных данных, а также нормы и правила, установленные в нашей компании".
+							Ваши данные не используются в коммерческих целях, ви делитесь ими по собственному желанию.
 						</p>
 						<div class="politic-popup__title">
 							Политика в отношении обработки персональных данных
 							<p>
-								<a href="policy/policy.pdf" download="policy/policy.pdf">policy.pdf,</a> 203 КБ
+								<a href="#" download="">policy.pdf,</a> 203 КБ
 							</p>
 						</div>
 						<p>
-							По всем вопросам вы можете связаться по email: <a href="mailto:info@maketstorent.ru" class="politic-popup__mail">info@maketstorent.ru</a>
+							По всем вопросам вы можете связаться по email: <a href="mailto:mail@mail.oo" class="politic-popup__mail">mail@mail.oo</a>
 						</p>
 					</div>
 			</div>
